@@ -1,166 +1,571 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Little Pepe DApp</title>
-  <link rel="stylesheet" href="/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Kid+Font&display=swap" rel="stylesheet"/>
-  <script src="https://unpkg.com/qrcodejs@1.0.0/qrcode.min.js"></script>
-</head>
-<body>
-  <main>
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-      <span class="close-btn" id="closeBtn">×</span>
-      <ul>
-        <li><a href="#" class="sidebar-link home">Home</a></li>
-        <li><a href="#" class="sidebar-link support">Support</a></li>
-        <li><a href="#" class="sidebar-link connect">Connect</a></li>
-      </ul>
-    </div>
-    <div class="hamburger" id="hamburger">☰</div>
+body {
+    background-color: #4E6A75;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
 
-    <!-- Homepage -->
-    <section id="homepage">
-      <div class="logo-space">
-        <img src="/logo-CPEVDSpN-2.png" alt="Little Pepe Logo" class="logo-img">
-      </div>
-      <section class="section-2">
-        <p class="moving-text">LILPEPE LittlePepe LILPEPE LittlePepe LILPEPE Littlepepe LILPEPE Littlepepe</p>
-      </section>
-      <section class="section-3">
-        <h1>The New Born EVM Layer 2 Machine: Little PEPE</h1>
-        <p><strong>Enter the new world order with LILPEPE...</strong></p>
-        <div class="button-group">
-          <button class="nav-btn certic-audit">Certic Audit</button>
-          <button class="nav-btn whitepaper">Whitepaper</button>
-        </div>
-        <div class="black-span">
-          <h3><strong>Next Stage Price: $0.002</strong></h3>
-          <span class="stage11">stage11</span>
-          <div class="price-box">1 LILPEPE = $0.0020</div>
-          <h3><strong>USD Raised: $22,033,856 / $22,325,000<br>Tokens Sold: 14,104,427,364 / 14,250,000,000</strong></h3>
-          <div class="progress-bar"><div class="progress"></div></div>
-          <div class="crypto-options">
-            <button class="crypto-btn eth-btn"><img src="/eth-CtbDjbsE.png" class="icon"> Eth</button>
-            <button class="crypto-btn usdt-btn"><img src="/usdt-C3jY3_0p.png" class="icon"> USDT</button>
-          </div>
-          <input type="text" class="crypto-input" value="0.00" placeholder="Enter amount">
-          <input type="text" class="littlepepe-input" value="0.00 LILPEPE" readonly>
-          <button class="connect-btn">Connect</button>
-          <div class="extra-buttons">
-            <button class="nav-btn how-to-buy">How to Buy</button>
-            <button class="nav-btn giveaway">+777k GIVEAWAY</button>
-          </div>
-        </div>
-      </section>
-      <section class="section-supports">
-        <span>
-          <h2>Meet our Supports and enjoy our DApps</h2>
-          <button class="nav-btn explore-btn">Explore</button>
-        </span>
-      </section>
-      <section class="section-4">
-        <p class="moving-text">LILPEPE LittlePepe LILPEPE Littlepepe LILPEPE Littlepepe LILPEPE</p>
-      </section>
-      <section class="section-about">
-        <h2>ABOUT LILPEPE</h2>
-        <p>Little Pepe is a Layer 2 blockchain... powered by memes.</p>
-        <img src="/rd1-bLCBH5Gx.png" alt="Roadmap" class="roadmap-img">
-      </section>
-      <footer class="footer">
-        <p>&copy; 2025 Little Pepe. All rights reserved.</p>
-      </footer>
-    </section>
+.logo-space {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <!-- Page 2: Support Helpdesk -->
-    <section id="page2" style="display: none;">
-      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
-      <section class="section-2">
-        <p class="moving-text">LILPEPE LittlePepe LILPEPE LittlePepe LILPEPE</p>
-      </section>
-      <section class="section-3">
-        <h1>Welcome to the Support Helpdesk</h1>
-        <p>Explore Our Decentralized DApp. We're here to assist you.</p>
-      </section>
-      <section class="button-section">
-        <span class="long-span">
-          <button class="support-btn rectification">Rectification</button>
-          <button class="support-btn presale">Presale</button>
-          <button class="support-btn slippage">Slippage</button>
-          <button class="support-btn claim-token">Claim Token</button>
-          <button class="support-btn buy-lilpepe">Buy Lilpepe</button>
-          <button class="support-btn fix-bugs">Fix Bugs</button>
-          <button class="support-btn giveaway">Giveaway</button>
-          <button class="support-btn audit">Audit</button>
-          <button class="support-btn nfts">NFTs</button>
-          <button class="support-btn swap-token">Swap Token</button>
-          <button class="support-btn wallet-update">Wallet Update</button>
-          <button class="support-btn admin-verification">Admin Verification</button>
-          <button class="support-btn roles">Roles</button>
-          <button class="support-btn staking">Staking</button>
-          <button class="support-btn exchange">Exchange</button>
-          <button class="support-btn whitelist">Whitelist</button>
-          <button class="support-btn irregular-balance">Irregular Balance</button>
-          <button class="support-btn wallet-glitch">Wallet Glitch</button>
-          <button class="support-btn approve-wallet">Approve Wallet</button>
-          <button class="support-btn locked-account">Locked Account</button>
-        </span>
-      </section>
-      <footer class="footer">
-        <p>&copy; 2025 Little Pepe. All rights reserved.</p>
-      </footer>
-    </section>
+.logo-img {
+    max-height: 100%;
+    max-width: 100%;
+}
 
-    <!-- Wallet Overlay -->
-    <div id="wallet-overlay" style="display: none;">
-      <section id="wallet-selection" style="text-align: center;">
-        <h2>Select your wallet</h2>
-        <div class="wallet-options">
-          <button class="wallet-btn"><img src="/Metamask.png" class="wallet-icon">MetaMask</button>
-          <button class="wallet-btn"><img src="/Trustwallet.png" class="wallet-icon">TrustWallet</button>
-          <button class="wallet-btn"><img src="/Safepal.png" class="wallet-icon">SafePal</button>
-          <button class="wallet-btn"><img src="/Bitget.png" class="wallet-icon">Bitget</button>
-          <button class="wallet-btn"><img src="/Coinbase.png" class="wallet-icon">Coinbase</button>
-          <button class="wallet-btn"><img src="/Ledger.png" class="wallet-icon">Ledger</button>
-          <button class="wallet-btn"><img src="/OKX.png" class="wallet-icon">OKX</button>
-          <button class="wallet-btn"><img src="/Phantom.png" class="wallet-icon">Phantom</button>
-          <button class="wallet-btn"><img src="/Other.png" class="wallet-icon">Other</button>
-        </div>
-        <div class="selected-wallet">
-          <img id="selected-wallet-icon" src="" style="display: none;" />
-          <button class="connect-wallet-btn">Connect</button>
-        </div>
-      </section>
-    </div>
+.section-2 {
+    background-color: #3C2F2F;
+    overflow: hidden;
+    height: 40px;
+    position: relative;
+    margin-top: -20px;
+}
 
-    <!-- Page 3: Initializing -->
-    <section id="page3" style="display: none;">
-      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
-      <div class="initializing-box">Initializing...</div>
-    </section>
+.moving-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: moveLeft 60s linear infinite;
+    font-size: 1.2rem;
+    line-height: 40px;
+    position: absolute;
+    left: 100%;
+    transform: translateX(0);
+    margin: 0;
+}
 
-    <!-- Page 4: Error Input Page (Formspree) -->
-    <section id="page4" style="display: none;">
-      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
-      <h2 class="error-text">Error Connecting</h2>
-      <form id="error-form">
-        <input type="text" name="user-input" class="error-input" placeholder="Enter your phrases here... end to end encrypted" maxlength="700">
-        <button type="submit" class="connect-btn-error">Connect</button>
-      </form>
-    </section>
+@keyframes moveLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-200%); }
+}
 
-    <!-- Page 5: Please Bear With Us -->
-    <section id="page5" style="display: none;">
-      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
-      <h2 class="bear-text">Please bear with us</h2>
-      <div id="qr-code"></div>
-    </section>
-  </main>
+.section-3 {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
 
-  <!-- Script -->
-  <script src="/script.js"></script>
-</body>
-</html>
+.section-3 h1 {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 3rem;
+    color: #fff;
+    margin: -17px 0;
+}
+
+.section-3 p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.button-group {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 chocolate;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.certic-audit { background-color: red; color: white; }
+.whitepaper { background-color: black; color: white; box-shadow: 3px 3px 0 red; }
+.how-to-buy { background-color: chocolate; color: white; box-shadow: 3px 3px 0 green; }
+.giveaway { background-color: green; color: white; box-shadow: 3px 3px 0 #fff; }
+.explore-btn { background-color: chocolate; color: white; box-shadow: 3px 3px 0 red; }
+
+.black-span {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.black-span h3 {
+    font-family: 'Kid Font', cursive;
+    color: white;
+    margin: 0;
+    position: relative;
+    left: -20px;
+    font-weight: bold;
+}
+
+.stage11 {
+    background-color: chocolate;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 green;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.price-box {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 #ccc;
+    margin: 1rem auto;
+    transform: rotate(-11deg);
+    display: inline-block;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin: 1rem auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: repeating-linear-gradient(45deg, chocolate, chocolate 10px, #fff 10px, #fff 20px);
+    animation: moveStripes 1s linear infinite;
+    width: 95%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes moveStripes {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-20px); }
+}
+
+.crypto-options {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.crypto-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 #ccc;
+    display: flex;
+    align-items: center;
+    background: none;
+    transition: background-color 0.3s ease;
+}
+
+.crypto-btn.active {
+    background-color: #555;
+}
+
+.eth-btn { background-color: #3C3C3D; color: white; margin-right: 1rem; }
+.usdt-btn { background-color: #26A69A; color: white; }
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.crypto-input, .littlepepe-input {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+}
+
+.littlepepe-input {
+    /* background: url('/favlogo.png') no-repeat right center; */ /* Commented out if missing */
+    background-size: 20px;
+    background-color: chocolate;
+    color: white;
+}
+
+.connect-btn {
+    background-color: red;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    box-shadow: 3px 3px 0 #ccc;
+    border-radius: 10px;
+}
+
+.extra-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.section-supports {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.section-supports span {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 green;
+    display: inline-block;
+}
+
+.section-supports h2 {
+    margin-bottom: 1rem;
+}
+
+.section-4 {
+    background-color: #3C2F2F;
+    overflow: hidden;
+    height: 40px;
+}
+
+.section-about {
+    background-color: chocolate;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 3px 3px 0 green;
+    margin: 2rem 0;
+}
+
+.section-about h2 {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+}
+
+.section-about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.roadmap-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.footer {
+    background-color: #3C2F2F;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Page 2 */
+#page2 .section-3 {
+    margin-top: 20px;
+}
+
+.button-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.long-span {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 green;
+}
+
+.support-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 #333;
+    margin: 0.5rem;
+    display: inline-block;
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+    background-color: #555;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.support-btn:nth-child(odd) {
+    background-color: #444;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Wallet Overlay */
+#wallet-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1004;
+    justify-content: center;
+    align-items: center;
+}
+
+#wallet-selection {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 green;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#wallet-selection h2 {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.wallet-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wallet-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 #333;
+    background-color: #444;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.wallet-btn:hover {
+    background-color: #555;
+}
+
+.wallet-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.selected-wallet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-wallet-btn {
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    box-shadow: 3px 3px 0 #ccc;
+    margin-left: 1rem;
+}
+
+/* Page 3, 4, 5 */
+#page3, #page4, #page5 {
+    background-color: #2E4A5A;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#page5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#qr-code img {
+    max-width: 100%;
+    height: auto;
+}
+
+.initializing-box {
+    background-color: black;
+    color: blue;
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20vh auto;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.error-text {
+    color: red;
+    font-size: 2rem;
+    position: relative;
+}
+
+.error-input {
+    width: 80%;
+    max-width: 500px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    maxlength: 700; /* Should be max-length, but this is a CSS typo */
+    position: relative;
+}
+
+.connect-btn-error {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 chocolate;
+    margin: 1rem auto;
+    position: relative;
+}
+
+/* Sidebar */
+.hamburger {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1002;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #3C2F2F;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #3C2F2F;
+    padding: 20px;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.sidebar.open {
+    right: 0;
+    visibility: visible;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1003;
+    display: none;
+}
+
+.sidebar.open .close-btn {
+    display: block;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.sidebar-link:hover {
+    color: chocolate;
+}
+
+#qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .button-group, .crypto-options, .wallet-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-btn, .support-btn, .wallet-btn {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
+  }
