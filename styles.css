@@ -390,13 +390,6 @@ body {
     margin-right: 8px;
 }
 
-/* Specific adjustment for wallet icon in #wallet-selection */
-#wallet-selection .wallet-icon {
-    width: 16px; /* Reduced size */
-    height: 16px; /* Reduced size */
-    margin-right: 5px; /* Adjusted spacing */
-}
-
 .selected-wallet {
     display: flex;
     align-items: center;
@@ -424,7 +417,7 @@ body {
     background-color: black;
     color: blue;
     padding: 2rem;
-    text-align: center; /* Centered text */
+    text-align: center;
     font-size: 2rem;
     margin: 20vh auto;
     width: 300px;
@@ -547,4 +540,4 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    }
