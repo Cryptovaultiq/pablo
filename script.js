@@ -72,7 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('active');
             const walletImg = button.querySelector('.wallet-icon').src;
             selectedWalletIcon.src = walletImg;
+            selectedWalletIcon.style.width = '16px'; // Set desired size
+            selectedWalletIcon.style.height = '16px'; // Set desired size
             selectedWalletIcon.style.display = 'inline-block';
+            selectedWalletIcon.style.marginRight = '5px'; // Adjust spacing
         });
     });
 
@@ -184,4 +187,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
 });
